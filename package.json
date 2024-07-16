@@ -15,11 +15,8 @@
     }
   },
   "lint-staged": {
-    "*.mjs": [
-      "eslint — fix",
-      "prettier — write",
-      "git add"
-    ]
+    "*": "pnpm lint:prettier:write --ignore-unknown",
+    "*.{ts,tsx,mjs}": "pnpm lint:eslint"
   },
   "keywords": [],
   "author": "",
